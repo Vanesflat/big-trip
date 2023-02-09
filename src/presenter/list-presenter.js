@@ -82,7 +82,9 @@ export default class ListPresenter {
   }
 
   showListMessage() {
-    this.#renderListMessage();
+    if (!this.#pointsModel.points.length) {
+      this.#renderListMessage();
+    }
   }
 
   #renderPoint(point) {
